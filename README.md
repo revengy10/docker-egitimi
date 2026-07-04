@@ -57,3 +57,9 @@ ile). SQLite dosyasının klasörünü --mount type=volume,src=todo-db,
 target=/etc/todos ile volume'a bağladım; konteyneri silip yenisini açınca
 maddeler yerindeydi. docker volume inspect ile volume'un diskteki gerçek
 yerini (Mountpoint) gördüm.
+
+## Workshop - Part 5: Bind Mount ile Geliştirme Konteyneri
+Kaynak kodu bind mount ile çıplak node:24-alpine konteynerine bağlayıp
+içeride nodemon'lu dev sunucusu çalıştırdım (build gerektirmeden). Kod
+kaydettiğim an nodemon sunucuyu yeniden başlattı. Yeni araçlar: -w
+(working dir), sh -c ile komut zinciri, docker logs -f ile canlı log.
