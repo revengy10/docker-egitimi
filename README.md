@@ -71,3 +71,10 @@ netshoot konteynerinde dig ile Docker'ın gömülü DNS'inin mysql ismini
 konteyner IP'sine çözdüğünü gördüm. Uygulama bağlantı ayarlarını -e
 MYSQL_HOST/USER/PASSWORD/DB değişkenlerinden aldı; maddelerin MySQL'e
 yazıldığını mysql istemcisiyle SELECT çekerek doğruladım.
+
+## Workshop - Part 7: Docker Compose
+Part 6'daki iki uzun docker run komutunu compose.yaml'a çevirdim: servis
+adları otomatik network alias oluyor, named volume'lar üst seviye volumes:
+bölümünde bildirilmek zorunda, ağ tanımı gerekmiyor (Compose otomatik
+kuruyor). docker compose logs -f ile tüm servislerin loglarını tek akışta
+izledim. Stack artık tek dosyada, versiyon kontrolünde.
