@@ -63,3 +63,11 @@ Kaynak kodu bind mount ile çıplak node:24-alpine konteynerine bağlayıp
 içeride nodemon'lu dev sunucusu çalıştırdım (build gerektirmeden). Kod
 kaydettiğim an nodemon sunucuyu yeniden başlattı. Yeni araçlar: -w
 (working dir), sh -c ile komut zinciri, docker logs -f ile canlı log.
+
+## Workshop - Part 6: Çok Konteynerli Uygulama (MySQL)
+To-do uygulamasını SQLite'tan ayrı konteynerde çalışan MySQL'e geçirdim.
+todo-app ağı + --network-alias mysql ile isim tabanlı bağlantı kurdum;
+netshoot konteynerinde dig ile Docker'ın gömülü DNS'inin mysql ismini
+konteyner IP'sine çözdüğünü gördüm. Uygulama bağlantı ayarlarını -e
+MYSQL_HOST/USER/PASSWORD/DB değişkenlerinden aldı; maddelerin MySQL'e
+yazıldığını mysql istemcisiyle SELECT çekerek doğruladım.
