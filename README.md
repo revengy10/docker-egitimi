@@ -78,3 +78,10 @@ adları otomatik network alias oluyor, named volume'lar üst seviye volumes:
 bölümünde bildirilmek zorunda, ağ tanımı gerekmiyor (Compose otomatik
 kuruyor). docker compose logs -f ile tüm servislerin loglarını tek akışta
 izledim. Stack artık tek dosyada, versiyon kontrolünde.
+
+## Workshop - Part 8: İmaj İnşa En İyi Pratikleri
+Workshop Dockerfile'ını cache-dostu yapıya çevirdim (önce package.json +
+package-lock.json ve npm install, en son COPY . .) — kod değişikliğinde
+build ~1 saniyeye indi. Multi-stage örneklerini inceledim; yeni not: React
+uygulamaları derlenince statik dosyaya dönüştüğü için final imaj Node'suz,
+sadece nginx:alpine olabiliyor.
